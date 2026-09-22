@@ -1,28 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MTM6302 - Web Dev III - Week 3</title>
-  <link rel="stylesheet" href="css/main.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Monster Adoption Centre</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="container">
-    <h1>Week 3 - Manipulating HTML</h1>
-    <p id="info">Learning about finding, traversing, and manipulating HTML elements.</p>
-    <h2>
-      Three main nodes we will be working with
-    </h2>
-    <ul id="threeNodes">
-      <li class="type">Element Node</li>
-      <li class="type">Attribute Node</li>
-      <li class="type">Text Node</li>
-    </ul>
-    <a id="learn" href="https://developer.mozilla.org/en-US/docs/Web/API/Element/children">
-      Learn more about the children property here
-    </a>
-    <div id="box"></div>
-  </div>
+  <header class="masthead">
+    <p>MTM6302 · Week 3 JavaScript lab</p>
+    <span>Adoption file 003</span>
+  </header>
+  <main>
+    <div class="intro">
+      <p class="eyebrow">Small monster. Big personality.</p>
+      <h1>Monster Adoption Centre</h1>
+      <p>Meet your new study buddy. Snacks are strongly encouraged.</p>
+    </div>
+    <div class="layout">
+      <article id="monster-card" class="monster-card">
+        <div class="portrait-stage">
+          <span class="tag">Ready for adoption</span>
+          <img id="monster-image" src="assets/sleepy.svg" width="400" height="320"
+            alt="A sleepy green monster with closed eyes">
+        </div>
+        <div class="profile">
+          <p class="eyebrow">Your tiny companion</p>
+          <h2 id="monster-name">Mochi</h2>
+          <div aria-live="polite" aria-atomic="true">
+            <p id="monster-mood" class="mood">Waiting to meet you</p>
+            <p class="energy">Energy <strong><span id="monster-energy">20</span> / 100</strong></p>
+          </div>
+          <p id="monster-message">A little sleepy. A lot of potential.</p>
+        </div>
+      </article>
+      <aside class="side-panel" aria-label="Monster details and lab commands">
+        <section>
+          <p class="eyebrow">The essentials</p>
+          <h2>Favourite snacks</h2>
+          <ul id="snack-list">
+            <li class="snack">Moon crackers</li>
+            <li class="snack">Cloud popcorn</li>
+            <li class="snack">Emergency cookies</li>
+          </ul>
+        </section>
+        <section class="console-guide">
+          <h2>Mission control</h2>
+          <p>As you build each function, try its command in the browser console.</p>
+          <dl>
+            <dt><code>renameMonster('Pickles')</code></dt><dd>Give your buddy a name.</dd>
+            <dt><code>feedMonster(15)</code></dt><dd>Bring a snack.</dd>
+            <dt><code>playMonster(10)</code></dt><dd>Spend a little energy.</dd>
+            <dt><code>toggleParty()</code></dt><dd>Celebrate your adoption.</dd>
+            <dt><code>resetMonster()</code></dt><dd>Return to the starting state.</dd>
+          </dl>
+          <p class="small">These commands become available as you write them. Refreshing clears your changes.</p>
+        </section>
+      </aside>
+    </div>
+    <section id="certificate" class="certificate" hidden>
+      <p class="eyebrow">Officially unofficial</p>
+      <h2>Adoption complete!</h2>
+      <p><strong id="certificate-name">Mochi</strong> has found a study buddy. Please provide snacks and patient debugging.</p>
+    </section>
+    <footer>Build a little. Predict the result. Try it out.</footer>
+  </main>
 </body>
 </html>

@@ -1,0 +1,41 @@
+:root { color-scheme: light; font-family: Arial, Helvetica, sans-serif; color: #212721; background: #f4f7f5; }
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 1rem; line-height: 1.6; }
+.masthead { background: #006341; color: white; padding: 1rem max(1.25rem, calc((100vw - 1100px) / 2)); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.masthead p { margin: 0; font-weight: bold; }
+main { max-width: 1140px; margin: auto; padding: 2.5rem 1.25rem; }
+.intro { margin-bottom: 2rem; }
+h1 { font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.1; letter-spacing: -.04em; margin: .5rem 0 1rem; }
+h2 { line-height: 1.2; margin: 0 0 1rem; }
+p { margin: 0 0 1rem; }
+.eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; font-weight: bold; color: #006341; margin-bottom: .5rem; }
+.layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: 2rem; align-items: start; }
+.monster-card { border: 2px solid #006341; border-radius: 1.5rem; overflow: hidden; background: white; }
+.portrait-stage { position: relative; background: #dcefe4; padding: 2rem 1rem 0; }
+.portrait-stage img { width: 100%; height: auto; display: block; max-height: 320px; object-fit: contain; }
+.tag { position: absolute; top: 1rem; left: 1rem; padding: .25rem .75rem; background: white; border-radius: 2rem; font-size: .875rem; }
+.profile { padding: 1.75rem; }
+.profile h2 { font-size: 2.5rem; margin-bottom: .5rem; overflow-wrap: anywhere; }
+.mood { font-size: 1.25rem; font-weight: bold; }
+.energy { display: flex; justify-content: space-between; gap: 1rem; border-block: 1px solid #c9d5ce; padding: .8rem 0; }
+#monster-message { margin: 0; }
+.side-panel { display: grid; gap: 1.5rem; }
+.side-panel section { padding: 1.5rem; background: white; border: 1px solid #c9d5ce; border-radius: 1rem; }
+#snack-list { margin: 0; padding-left: 1.5rem; }
+.snack { padding: .25rem 0; }
+.console-guide dl { margin: 0; }
+.console-guide dt { margin-top: .8rem; }
+.console-guide dd { margin-left: 0; color: #455449; font-size: .9rem; }
+code { background: #e9f2ec; color: #004b31; padding: .2rem .4rem; border-radius: .25rem; font-size: .95rem; overflow-wrap: anywhere; }
+.small { font-size: .875rem; margin: 1rem 0 0; }
+.certificate { border: 2px dashed #006341; background: white; margin-top: 2rem; padding: 1.5rem; border-radius: 1rem; }
+.certificate p:last-child { margin-bottom: 0; }
+footer { margin-top: 2rem; color: #455449; font-size: .9rem; }
+/* JavaScript changes classes; CSS owns their appearance. */
+.is-sleepy .portrait-stage { background: #e3e8f0; }
+.is-hungry .portrait-stage { background: #fff0c2; }
+.is-happy .portrait-stage { background: #c9efdb; }
+.party-mode { outline: 5px dashed #006341; outline-offset: 5px; }
+.party-mode .portrait-stage { background: repeating-linear-gradient(135deg, #c9efdb 0 30px, #fff0c2 30px 60px); }
+[hidden] { display: none !important; }
+@media (max-width: 720px) { .layout { grid-template-columns: 1fr; } main { padding-top: 1.5rem; } }
